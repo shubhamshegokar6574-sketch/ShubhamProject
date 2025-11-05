@@ -1,0 +1,25 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Ensure docker enabled & started
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: Add ubuntu user to docker group
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes
+

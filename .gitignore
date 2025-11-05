@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+terraform/.terraform/
+terraform.tfstate*
+*.tfstate.backup
+crash.log
+
+# SSH keys (never commit secrets)
+id_ed25519_shubhamnet
+id_ed25519_shubhamnet.pub
+*.pem
+*.key
+
+# local stuff
+.vscode/
+__pycache__/
+
