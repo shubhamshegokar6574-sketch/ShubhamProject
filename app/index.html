@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HizNet Test Page</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HizNet Dashboard</title>
+ <style>
+   body {
+     margin: 0;
+     height: 100vh;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #1e90ff, #ff69b4, #ff8c00);
+     background-size: 400% 400%;
+     animation: gradient 10s ease infinite;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     text-align: center;
+   }
+   @keyframes gradient {
+     0% { background-position: 0% 50%; }
+     50% { background-position: 100% 50%; }
+     100% { background-position: 0% 50%; }
+   }
+   h1 {
+     font-size: 3rem;
+     margin-bottom: 10px;
+     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+   }
+   p {
+     font-size: 1.2rem;
+     opacity: 0.9;
+   }
+   .glow {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff,
+                  0 0 30px #ff0099, 0 0 40px #ff0099,
+                  0 0 50px #ff0099, 0 0 60px #ff0099,
+                  0 0 70px #ff0099;
+   }
+ </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 100px;">
-  <h1>TESTING</h1>
-  <p>Deployment successful!</p>
-  <p>GitHub Actions → Docker Hub → EC2</p>
+<body>
+ <div>
+   <h1 class="glow">🚀 ShubhamNet is Live!</h1>
+   <p>Welcome to your automated CI/CD deployed web service.</p>
+ </div>
 </body>
 </html>
-
