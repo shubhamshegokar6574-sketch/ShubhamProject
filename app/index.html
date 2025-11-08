@@ -3,65 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShubhamNet Dashboard</title>
+  <title>ShubhamNet - Smart Web Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
       height: 100vh;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #4b79a1, #283e51, #0f2027, #2c5364);
-      background-size: 400% 400%;
-      animation: gradient 8s ease infinite;
+      background: #0a0f1f;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      overflow: hidden;
     }
 
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .wrapper {
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      animation: pop 1.2s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .badge {
+      background: #16213e;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #00eaff;
+      display: inline-block;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00eaff50;
     }
 
     h1 {
-      font-size: 4.5rem;
-      margin-bottom: 15px;
+      font-size: 3.8rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #00eaff, #7a00ff, #ff007a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
-      font-size: 1.6rem;
-      font-weight: 300;
-      opacity: 0.95;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 25px;
     }
 
-    .glow {
-      text-shadow: 0 0 8px #fff, 0 0 12px #fff,
-                   0 0 20px #00eaff, 0 0 30px #00eaff,
-                   0 0 40px #0066ff, 0 0 50px #0066ff;
+    .btn {
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .container {
-      animation: fadeIn 1.5s ease-in-out;
+    .btn-primary {
+      background: #00eaff;
+      color: #000;
+      margin-right: 10px;
+      box-shadow: 0 0 15px #00eaff60;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-primary:hover {
+      background: #00c2d1;
     }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #00eaff;
+      color: #00eaff;
+    }
+
+    .btn-outline:hover {
+      background: #00eaff;
+      color: #000;
+    }
+
+    .floating-box {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(0, 234, 255, 0.1);
+      filter: blur(50px);
+      border-radius: 50%;
+      animation: float 6s infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(40px); }
+    }
+
+    .box1 { top: 10%; left: 5%; }
+    .box2 { bottom: 12%; right: 7%; animation-delay: 2s; }
 
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1 class="glow"> ShubhamNet is Live!</h1>
-    <p>Welcome to your automated CI/CD deployed web service.</p>
+
+  <div class="floating-box box1"></div>
+  <div class="floating-box box2"></div>
+
+  <div class="wrapper">
+    <span class="badge"> Deployment Successful</span>
+    <h1>Welcome to ShubhamNet</h1>
+    <p>Your next-gen platform for automated deployment, cloud hosting, and scalable web solutions.</p>
+
+    <button class="btn btn-primary">Go to Dashboard</button>
+    <button class="btn btn-outline">Learn More</button>
   </div>
+
 </body>
 </html>
 
