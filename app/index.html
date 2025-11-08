@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>HizNet Dashboard</title>
- <style>
-   body {
-     margin: 0;
-     height: 100vh;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background: linear-gradient(135deg, #1e90ff, #ff69b4, #ff8c00);
-     background-size: 400% 400%;
-     animation: gradient 10s ease infinite;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: white;
-     text-align: center;
-   }
-   @keyframes gradient {
-     0% { background-position: 0% 50%; }
-     50% { background-position: 100% 50%; }
-     100% { background-position: 0% 50%; }
-   }
-   h1 {
-     font-size: 3rem;
-     margin-bottom: 10px;
-     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-   }
-   p {
-     font-size: 1.2rem;
-     opacity: 0.9;
-   }
-   .glow {
-     text-shadow: 0 0 10px #fff, 0 0 20px #fff,
-                  0 0 30px #ff0099, 0 0 40px #ff0099,
-                  0 0 50px #ff0099, 0 0 60px #ff0099,
-                  0 0 70px #ff0099;
-   }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShubhamNet Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4b79a1, #283e51, #0f2027, #2c5364);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+      opacity: 0.95;
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #fff, 0 0 12px #fff,
+                   0 0 20px #00eaff, 0 0 30px #00eaff,
+                   0 0 40px #0066ff, 0 0 50px #0066ff;
+    }
+
+    .container {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
 </head>
 <body>
- <div>
-   <h1 class="glow">🚀 ShubhamNet is Live!</h1>
-   <p>Welcome to your automated CI/CD deployed web service.</p>
- </div>
+  <div class="container">
+    <h1 class="glow"> ShubhamNet is Live!</h1>
+    <p>Welcome to your automated CI/CD deployed web service.</p>
+  </div>
 </body>
 </html>
+
